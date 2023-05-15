@@ -1,0 +1,18 @@
+<p>Formulario</p>
+
+
+<div class="container">
+    <h1>Añade gatos</h1>
+    <form class="input-group mb-3" [formGroup]="gatosForm">
+        <input formControlName="name" type="text" class="form-control" placeholder="Nombre del gato">
+        <input formControlName="raza" type="text" class="form-control" placeholder="Raza">
+        <button (click)="sendData()" type="button" class="btn btn-primary">Añadir</button>
+    </form>
+    <div *ngIf="isError" class="alert alert-danger" role="alert">
+        Ha pasado algo!
+      </div>
+    <ul class="list-group">
+        <li *ngFor="let item of arrGatos">{{item.name}} - {{item.raza}}
+        <button type="button" (click)="eliminar(item.id)" class="btn btn-danger">Eliminar</button></li>
+      </ul>
+</div>

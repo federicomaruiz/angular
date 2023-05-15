@@ -9,6 +9,10 @@ import { PageHomeComponent } from './page-home/page-home.component';
 import { PageServiceComponent } from './page-service/page-service.component';
 import { PageContactComponent } from './page-contact/page-contact.component';
 import { PhoneNumberComponent } from './phone-number/phone-number.component';
+import { FormComponent } from './form/form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { PagePeliculasComponent } from './page-peliculas/page-peliculas.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,11 +22,15 @@ import { PhoneNumberComponent } from './phone-number/phone-number.component';
     PageHomeComponent,
     PageServiceComponent,
     PageContactComponent,
-    PhoneNumberComponent
+    PhoneNumberComponent,
+    FormComponent,
+    PagePeliculasComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
