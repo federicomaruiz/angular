@@ -1,0 +1,14 @@
+<!-- metodo las variables de ts dinamicamente -->
+<h4>{{title}}</h4>
+<p>{{desc}}</p>
+
+<!-- Le pongo un ID #oficio al input -->
+<input type="" #oficio>
+
+<!-- con (clik)  llamo a la funcion que tengo en el TS y le paso por parametro el valor que tenga el input
+oficio.value , cuando le de click a añadir se agregara a los servicios el valor del input-->
+<button (click)="addService(oficio.value)">Añadir</button>
+
+<ul>
+    <li *ngFor = "let service of myServices">{{service}} </li>
+</ul>
